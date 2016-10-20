@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo5</title>
+	<script src="prototype.js"></script>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<input type="text" id="a" value="aaaaa">
+	<script>
+		jQuery.noConflict()
+		alert('this is prototype'+$F('a'));
+
+		alert('this is jquery'+jQuery('#a').val());
+	</script>
+</body>
+</html>

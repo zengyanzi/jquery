@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tag</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		}
+	body{
+		margin: 50px;
+	}
+	ul{
+		list-style-type: none;
+	}
+	#ul{
+		height: 30px;
+		float: left;
+		margin-bottom: 10px;
+	}
+	#ul li{
+		height: 30px;
+		line-height: 30px;
+		padding: 0 15px;
+		border:1px solid black;
+		float: left;
+		margin-right: 3px;
+		cursor: pointer;
+	}
+	.current{
+		background: pink;
+	}
+	#content div{
+		width: 300px;
+		height: 200px;
+		border: 1px solid black;
+		display: none;
+	}
+	#content div.show{
+		display: block;
+	}
+
+	</style>
+</head>
+<body>
+	<ul id="ul">
+		<li class="current">php</li>
+
+		<li>ruby</li>
+
+		<li>java</li>
+	</ul>
+	<div id="content">
+		<div class="show">xlosintro</div>
+		<div>sdfsintro</div>
+		<div>werweintro</div>
+	</div>
+	<script>
+		var ul= document.getElementById('ul');
+		var li=ul.getElementsByTagName('li');
+		var content=document.getElementById('content');
+		var div =content.getElementsByTagName('div');
+		for (var i =0; i <li.length; i++) {
+			li[i].index=i;
+			li[i].onclick = function() {
+				
+				for (var i = 0; i <li.length; i++) {
+					li[i].className='';
+					div[i].style.display="none";
+
+				};
+
+
+				this.className='current';
+				div[this.index].style.display="block";
+			}
+		};
+	</script>
+</body>
+</html>

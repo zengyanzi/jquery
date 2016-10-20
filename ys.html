@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ys</title>
+	<style type="text/css">
+	#table{
+		width: 500px;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	#table td{
+		border: 1px solid black;
+	}
+	
+	</style>
+	<script src="jquery.js"></script>  
+</head>
+<body>
+	<table id="table">
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+		<tr>
+			<td>aaaa</td>
+			<td>bbb</td>
+			<td>ccccc</td>
+			<td>dddd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+		<tr>
+			<td>aaaa</td>
+			<td>bbb</td>
+			<td>ccccc</td>
+			<td>dddd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+		<tr>
+			<td>aaaa</td>
+			<td>bbb</td>
+			<td>ccccc</td>
+			<td>dddd</td>
+		</tr>
+		<tr>
+			<td>1111</td>
+			<td>2222</td>
+			<td>3333</td>
+			<td>4444</td>
+		</tr>
+		<tr>
+			<td>aaaa</td>
+			<td>bbb</td>
+			<td>ccccc</td>
+			<td>dddd</td>
+		</tr>
+	</table>
+
+	<script>
+	/*// var otable=document.getElementById('table');
+	// var atr= otable.getElementsByTagName('tr');
+	// // alert(atr.length);
+	// for (var i = 0; i < atr.length; i++) {
+	// 	// atr[i].style.background="yellow";
+	// 	if (i%2==1) {
+	// 		atr[i].style.background="yellow";
+	// 	}else{
+	// 		atr[i].style.background="pink";
+	// 	}
+	// };*/
+	$('#table tr').filter(':even').css('background','red').end().filter(':odd').css('background','yellow');
+	// $('#table tr:odd').css('background','yellow');
+	</script>
+</body>
+</html>

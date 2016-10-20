@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table filter</title>
+	<script src="jquery.js"></script>
+	
+
+</head>
+<body>
+	<form action="">
+		<input type="hidden" name="" id="" value="this is hidden" />
+		<input  type="text" name="" id="" value="This is cannnt be changed text" disabled="disabled"/>
+		<input type="password" name="" id="" value="this is password box"/>
+		<input type="button" value="this is button"/>
+		<input type="submit" value="this is submit"/> 
+		<input type="radio" name="" id="" value="this is option"/>
+		<input type="checkbox" name="" id="" checked="checked" value="this is multi option"/>
+		<input type="reset" value="this is reset"/>
+		<textarea name="" id="" cols="30" rows="10">this is text</textarea>
+		<select name="" id="">
+			<option value="1111">1111</option>
+			<option value="2222" selected="selected">222222</option>
+			<option value="3333">3333</option>
+		</select>
+		<input type="file" name="" id=""/> 
+		<input type="image" src="https://www.google.co.nz/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
+		
+	</from>
+	<script>
+	//alert($(':input').length);
+	//alert($(':text').length);
+	//$(':text').css('background',"red");
+	//alert($(':radio').val());
+	//alert($(':checkbox').val());
+	//alert($(':input[type=checkbox]').val());
+	//alert($('input:hidden').val());
+	//alert($('input:disabled').val());
+	//alert($('input:enabled').val());
+	//alert($('input[disabled=disabled]').val());
+	//alert($(':checked').val());
+	alert($(':selected').val());
+	alert($('select option[selected=selected]').val());
+	</script>
+
+</body>
+</html>

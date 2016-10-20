@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+	p{
+		height: 60px;
+		line-height: 40px;
+	}
+	.hidden{
+		visibility: hidden;
+	}
+	</style>
+</head>
+<body>
+
+		<p>Nam New Zealand ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Sed libero. Phasellus accumsan cursus velit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+		<p><a href="###"></a></p>
+		<p>In auctor lobortis lacus. Sed aliquam ultrices mauris. Integer tincidunt.</p> 
+		<div class="hidden">this is a div</div>
+
+	<script>
+		//$('p:contains("Zealand")').css('background','red');
+		//$('p:contains("Zealand")').show().siblings().hide();
+		//$('p:has("strong")').css('background',"red");
+		// $('p:parent').css('background','red');
+		// alert($('div:hidden').html());
+		alert($('div:visible').html());
+	</script>
+</body>
+</html>

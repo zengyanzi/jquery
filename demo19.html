@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<p>this is a p</p>
+	<script>
+	// $('p').click(function() {
+	// 	alert($(this).text('some text'));
+	// });
+	// $('p').bind('click',function() {
+	// 	alert($(this).text('some text'));
+	// });
+	// $('p').mousemove(function() {
+	// 	$(this).css('background', 'black');
+	// });
+	// $('p').unbind('click',function() {
+	// 	alert($(this).text('some text'));
+	// });
+	// $('p').one('click',function() {
+	// 	alert($(this).text('some text'));
+	// });
+	// $('body').delegate('p','click', function() {
+	// 	$(this).append('<p>this is new p</p>')
+	// });
+	// $('p').click(function() {
+	// 	$(this).css('background', 'red');
+	// });
+	// //the second one to update the color of text
+	// $('p').click(function() {
+	// 	$(this).css('color', '#fff');
+	// });
+	// //the third one,use unbind method 
+	// $('p').unbind('click', function name)
+	$('p').bind('click.background', function() {
+		$(this).css('background', 'red');
+	});
+	$('p').bind('click.color', function() {
+		$(this).css('color', 'blue');
+	});
+	$('p').unbind('click.background')
+	</script>
+</body>
+</html>

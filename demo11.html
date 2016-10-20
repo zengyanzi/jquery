@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>     
+	<meta charset="UTF-8"> 
+	<title>demo dom</title>     
+ 	<script src="jquery.js"></script>     
+ </head> 
+ <body>
+	<p id="vv">this is the 1 p</p>     
+	<p class="tt">this is the 2 p</p>
+	<p>this is the 3 p</p>     
+	<p>this is the 4 p</p>     
+	<p>this is the 5 p</p>
+	<p>this is the 6 p</p>
+
+	<!-- <form action="">
+		<input type="text" value="1111"/>
+		<input type="text" value="2222"/>	
+		<input type="text" value="3333"/>			
+	</form>  
+	<p></p> -->
+
+<script>
+//$('p').eq(0).css('background','red');
+//$('p').filter(':odd').css('background','red');// odd
+//$('p').filter(':even').css('background', 'red');
+//$('p').filter('#vv').css('background', 'red');
+//$('p').first().css('background', 'red'); 
+//$('p').last().css('background', 'red'); 
+// $('p').click(function(){
+// 	if($(this).is('.tt')){
+// 		$(this).css('background','red');
+// 	}
+// })
+// $('p').not(':first').css('background','red');
+
+	// var arr= $('input').map(function() {
+	// 	return $(this).val()
+	// }).get().join(',');
+	// $('p').html(arr);
+	$('p').slice(1, 3).css('background', 'red'); //[1,3)
+</script>
+</body> 
+</html>

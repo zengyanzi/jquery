@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo7</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+	#go{
+		width: 100px;
+		height: 100px;
+		background: green;
+		position: absolute;
+		top:0;
+		left: 0;
+	}
+	</style>
+</head>
+<body>
+	<p><span>pay</span><em>attention</em> this is 1</p>
+	<p>this is 2</p>
+	<p>this is 3</p>
+	<p class="a">this is 4</p>
+	<p>this is 5</p>
+	<p>this is 6</p>	
+	<div id="go"></div>
+
+	<script>
+	// $('p:first').css('background','red');
+	// $('p:not(".a")').css('background','red');
+	// $('p:not(\'.a\')').css('background','red');
+	// $('p:odd()').css('background','red');
+	//$('p:eq(3)').css('background','red');
+	// $('p:gt(3)').css('background','red');
+	$('#go').animate({'left':'1000'},10000)
+	$(':animated').css('background','red');
+	</script>
+</body>
+</html>

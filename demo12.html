@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo dom </title>
+	<script src="jquery.js"></script>     
+</head>
+<body>
+	<!-- <div id="outer" style="position:relative">
+		outer
+		<div id="wrap" style="position:absoulute;left:10px;top:20px;">wrap
+			<p id="p1"><span>this is </span>this is 1 p</p>
+			<p id="p2">this is 2 p</p>
+			<p>this is 3 p</p>
+			<div>this is div</div>
+		</div>
+	</div> -->
+	<!-- <form action="">
+		<input type="text" name="" id="" value="this is 1"/>
+		<input type="text" name="" id="" value="this is 2"/>
+		<input type="text" name="" id="" value="this is 3"/>
+		<input type="text" name="" id="" value="this is 4"/>
+		
+	</form> -->
+	<form action="">
+		<input type="checkbox" name="gender[]" i]d="" value="this is boy"/>
+		<input type="checkbox" name="gender[]" id="" value="this is girl"/>
+		<input type="checkbox" name="gender[]" id="" value="this is secret"/>
+	
+	</form>
+	<script>
+	// $('#wrap').children('p').css('background','red');
+	//$('#p1').parent().css('background','red');
+	// $('#p1').parents().css('background','red');
+	// $('#p1').offsetParent().css('background', 'red');;
+	// $('#p1').nextAll('p').css('background','red');
+	// $('#p2').prev().css('background','red');
+	// $('#p2').siblings().css('background','red');
+	// $('span').parent().css('background','red').end().css('background','yellow').;
+	//$('#p1').nextAll().css('background','red').end().css('background','red');
+	// $('#p1').nextAll().addBack().css('background','red');
+	// // alert($('input').val());
+	// $('input').each(function() {
+	// 	alert($(this).val());
+	// });
+	$('input[name=gender\\[\\]]').click(function() {
+		alert($(this).val());
+	});
+	</script>
+</body>
+</html>

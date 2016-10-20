@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll public</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		margin: 50px;
+	}
+	ul
+	{
+		list-style: none;
+	}
+	li{
+		height: 30px;
+		line-height: 30px;
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>this is the 1 news</li>
+		<li>this is the 2 news</li>
+		<li>this is the 3 news</li>
+		<li>this is the 4 news</li>
+		<li>this is the 5 news</li>
+		<li>this is the 6 news</li>
+		<li>this is the 7 news</li>
+		<li>this is the 8 news</li>
+		<li>this is the 9 news</li>
+		<li>this is the 10 news</li>
+	</ul>
+	<script>
+	setInterval(function(){
+			var new1=$("ul>:first").clone(true);
+		$('ul').append(new1);
+		$('ul>:first').remove();
+
+	},5000);
+
+
+	
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo2</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<p>this is the first one</p>
+	<p>second one</p> 
+	<p>third one</p>
+	<!-- click the p tag and the current content will be poped out -->
+	
+	<script>
+	 // var p = document.getElementsByTagName('p');
+
+	 // for (var i = 0; i <p.length; i++) {
+	 // 	p[i].onclick =function(){
+	 // 		alert(this.innerHTML);
+	 // 	}
+	 // };
+	 var p = $('p');
+	 p.click(function(){
+	 	alert($(this).html());
+	 });
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<!-- 	<p title="js" myattribute="mi" >this is a javascript rtest <strong>testtest</strong></p>
+	<p myattribute="mine">here is somthimg sokslmdf </p>
+	<div title="language">liyunlsojdmfk msoijdf s sdf </div> -->
+	<div id="a">
+		<p>this is a first p</p> 
+		<p>this is a second p</p> 
+		<p>this is a second p</p>
+		<p>this is a second p</p>  
+	</div>
+	<div>
+		<p>this is the only child</p> 
+	</div>
+
+	<script>
+		//$('p[myattribute=mine]').css('background','red');
+		// $('p[title][myattribute=mi]').css('background', 'red');
+		//$('div p:first-child').css('background','red');
+		//$('div p:only-child').css('background','red');
+		$('div p:nth-child(even)').css('background','red');
+	</script>
+</body>
+</html>

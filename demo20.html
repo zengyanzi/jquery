@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<p>p标签</p>
+	<a href="#">click</a>
+	<script>
+	//hover模拟鼠标进入mounseenter和mouseleave离开的事件
+	// $('p').hover(function() {
+	// 	$(this).css('background', 'red');
+	// },function(){
+	// 	$(this).css('background', 'none');
+	// });
+	$('a').click(function() {
+		alert('click me ')
+	});
+	$('a').trigger('click')
+	</script>
+	
+</body>
+</html>

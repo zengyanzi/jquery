@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkdelete</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+		#tab{
+			border: 1px solid black;
+		}
+		tr{
+			height: 30px;
+		}
+		th{
+			border: 1px solid black;
+		}
+		td{
+			border: 1px solid black;
+			text-align: center;
+		}
+		td a{
+			margin-right: 5px;
+			color: #f00;
+		}
+		.pop{
+			width: 500px;
+			padding: 10px;
+			border: 1px solid red;
+			position: absolute;
+			left: 50%;
+			margin-left: -250px;
+			top:100px;
+			background: #fff;
+			display: none;
+			z-index: 4;
+		}
+		.pop p{
+			border-bottom: 1px solid red;
+		}
+		.submit{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<table id="tab">
+		<tr>
+			<th >name</th>
+			<th >year</th>
+			<th >occupacy</th>
+			<th >wage</th>
+			<th >action</th>
+		</tr>
+		<tr>
+			<td class="content">jenny</td>
+			<td class="content">25</td>
+			<td class="content">frontend</td>
+			<td class="content">6000</td>
+			<td><a href="#" class="view">check</a><a href="#"  class="delete">delete</a><a href="#" class="modify">modify</a></td>
+		</tr>
+		<tr>
+			<td class="content">fred</td>
+			<td class="content">25</td>
+			<td class="content">backedn</td>
+			<td class="content">16000</td>
+			<td><a href="#" class="view">check</a><a href="#"  class="delete">delete</a><a href="#" class="modify">modify</a></td>
+		</tr>
+		<tr>
+			<td class="content">special</td>
+			<td class="content">25</td>
+			<td class="content">backedn</td>
+			<td class="content">15000</td>
+			<td><a href="#" class="view">check</a><a href="#"  class="delete">delete</a><a href="#" class="modify">modify</a></td>
+		</tr>
+		<tr>
+			<td class="content">xiaohai</td>
+			<td class="content">25</td>
+			<td class="content">backedn</td>
+			<td>26000</td>
+			<td><a href="#" class="view">check</a><a href="#" class="delete">delete</a><a href="#" class="modify">modify</a></td>
+		</tr>
+	</table>
+	<div class="pop">
+		<p><strong>name:</strong><span></span><input type="text" name="" value=""/></p>
+		<p><strong>year:</strong><span></span><input type="text" name="" value=""/></p>
+		<p><strong>company:</strong><span></span><input type="text" name="" value=""/></p>
+		<p><strong>wage:</strong><span></span><input type="text" name="" value=""/></p>
+		<a href="#" class="close">close</a>
+		<a href="#" class="submit">submit</a>
+	</div>
+	<script>
+	//view
+	$('.view').click(function() {
+
+		 var maskheight=$(document).height();
+		 var maskwidth=$(document).width();
+		//add cover sheet
+		$('<div class="mask"></div>').appendTo($('body'));
+		$('div.mask').css({
+			'opactiy':0.4,
+			'background':'black',
+			'position':'absolute',
+			'left':0,
+			'top':0,
+			'width':maskwidth,
+			'height':maskheight,
+			'z-index':2
+		})
+
+
+		var arr=[];
+		$(this).parent().siblings().each(function() {
+			arr.push($(this).text());
+		});
+		//alert(arr);
+		$('.pop').show().children().each(function(i) {
+			$(this).children('span').text(arr[i]);
+		});
+
+		//close
+		$('.close').click(function() {
+			$(this).parent().hide();
+			$('.mask').remove();
+		});
+	});
+			//delete
+		$('a.delete').click(function() {
+			$(this).parents('tr').remove();
+		});
+		//modify
+		
+		$('.modify').click(function() {
+			$('.pop').show();
+			$('.submit').show().click(function() {
+				var arr=[];
+				$(this).siblings().children('input').each(function(i) {
+					arr.push($(this).val());
+				});
+				$('.content').each(function(i) {
+				  $(this).text(arr[i]);
+			    });
+			});
+			
+			
+		});
+	</script>
+</body>
+</html>

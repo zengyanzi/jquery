@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+	<style type="text/css">
+	p{
+		width: 300px;
+		padding: 10px;
+		border:1px solid #abcdef;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<a href="###">click</a>
+	<p>sdfsfsd</p>
+	<script>
+	// $('a').click(function() {
+	// 	$('p').hide(600);//600 means mm
+	// 	$('p').hide('slow'); //fast slow normal
+	// });
+	// $('a').click(function() {
+	// 	$('p').show(600);//600 means mm
+	// });
+	// $('a').click(function() {
+	// 	$('p').toggle('slow'); // swift with show and hide
+	// });
+	// $('a').click(function() {
+	// 	$('p').fadeIn(1000);
+	// });
+	// $('a').click(function() {
+	// 	$('p').fadeToggle(500);
+	// });
+	$('a').click(function() {
+		$('p').slideDown(500)
+	});
+	</script>
+</body>
+</html>
