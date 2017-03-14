@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.vertical-tabs.css" rel="stylesheet" >
+<title>Profile</title>
+<script type="text/javascript">
+var pc_style=""
+   var browser={
+    versions:function(){ 
+           var u = navigator.userAgent, app = navigator.appVersion; 
+           return {//return the version of mobile
+                trident: u.indexOf('Trident') > -1, //IE
+                presto: u.indexOf('Presto') > -1, //opera
+                webKit: u.indexOf('AppleWebKit') > -1, //apple
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //firework
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/)&&u.indexOf('QIHU')&&u.indexOf('Chrome')<0, //mobile
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android or uc
+                iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, // iPhone
+                iPad: u.indexOf('iPad') > -1, //iPad
+                webApp: u.indexOf('Safari') == -1, //safari
+                ua:u 
+            };
+         }(),
+         language:(navigator.browserLanguage || navigator.language).toLowerCase()
+} 
+
+if(browser.versions.mobile&&!browser.versions.iPad){
+     this.location = "mobile.html";//mobile
+}else{
+	this.location="web.html";//web
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

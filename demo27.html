@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
+	<span>you could input at <strong style="color:red">140</strong>words</span>
+	<script>
+	var marLength=140;
+	$('textarea').keyup(function() {
+		var l=$(this).val().length;
+		$('strong').text(marLength-l);
+		if (parseInt($('strong').text())<0) {
+			$('strong').text('0');
+			var ll=$(this).val().substring(0,141);
+			$(this).val(ll);
+			}
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+
+</head>
+<body>
+	<div id="checkbox">
+		<input type="checkbox" name="" id="" checked="checked"/>eat	
+		<input type="checkbox" name="" id=""/>drink	
+		<input type="checkbox" name="" id=""/>play
+		<input type="checkbox" name="" id=""/>happy
+	</div>
+	<div id="btn">
+		<input type="button" id="checkall" value="selected all"/>
+		<input type="button" id="checknone" value="not selected all"/>
+		<input type="button" id="checkreverse" value="selected oposite"/>
+	</div>
+	<script >
+		var checkall=$('#checkall');
+		var checknone=$('#checknone');
+		var checkreverse=$('#checkreverse');
+		var checkbox=$('#checkbox>:checkbox');
+		checkall.click(function() {
+			// checkbox.attr('checked','checked');
+			checkbox.attr('checked', 'true');
+		});
+		checknone.click(function() {
+			checkbox.removeAttr('checked','false');
+		});
+		checkreverse.click(function() {
+			checkbox.each(function() {
+				$(this).attr('checked', !$(this).attr('checked'));
+			});
+		});
+	</script>
+</body>
+</html>

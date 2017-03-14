@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>search</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="jquery.js"></script>
+	<style type="text/css">
+	body{
+		background-color: #333;
+	}
+	.bg-div{
+		background-image: url(river.jpg);
+		width: 1228px;
+		height: 690px;
+		margin: 0 auto;
+		position: relative;
+
+	}
+	.logo{
+		margin: -4px 18px 0 0 ;
+		float: left;
+		background-image: url(logo.png);
+		width: 107px;
+		height: 53px;
+
+	}
+	form{
+		float: left;
+		background-color: #fff;
+		padding: 5px;
+	}
+	.search-input-text{
+		border: 0;
+		float: left;
+		height: 25px;
+		line-height: 25px;
+		outline: none;
+		width: 350px;
+
+	}
+	.search-input-button{
+		border: 0;
+		float: left;
+
+		background-image: url(search-button.png);width: 29px;height:29px; 
+	}
+	.searchbox{
+		position: absolute;
+		top:200px;
+		left:300px;
+	}
+	.suggest{
+		display: none;
+		width: 388px;
+		background-color: #fff;
+		border: 1px solid #999;
+
+	}
+	.suggest ul{
+		list-style: none;
+		margin:0;
+		padding: 0;
+	}
+	.suggest ul li{
+		padding: 3px;
+		font-size: 14px;
+		line-height: 25px;
+		cursor: pointer;
+	}
+	.suggest ul li:hover{
+		text-decoration: underline;
+		background-color: #e5e5e5;
+	}
+	</style>
+</head>
+<body>
+	<div class="bg-div">
+		<div class="searchbox">
+			<div class="logo">
+			</div>
+			<form class="search-form" action="http:cn.bing.com/search" target="_blank" id="search-form">
+				<input type="text" class="search-input-text" name="q" id="search_input"  autocomplete="off" />
+				<input type="submit" class="search-input-button" value=""/>
+			</form>
+		</div>
+
+	</div>
+	<div class="suggest" id="search-suggest">
+		<ul id="searchresult">
+			<li>waiting for dynamic feedback1</li>
+			<li>waiting for dynamic feedback2</li>
+			<li>waiting for dynamic feedback3</li>
+		</ul>
+	</div>
+	<script>
+	$('#search_input').bind('keyup', function() {
+		var searchtext=$('#search_input').val();
+		$.get('http://api.bing.com/qsonhs.aspx?q='+searchtext,function(d){
+			var d = d.AS.Results[0].Suggest;
+			for (var i = 0; i <d.length; i++) {
+				html+='li'+d[i].Txt+'</li>';
+			}
+			$('#searchresult').html(html);
+			$('#search-suggest').show().css({
+				top: $('#search-form').offset().top+$('#search-form').height()+10,
+				left: $('#search-form').offset().left,
+				position:'absolute'
+		});
+		},'json');
+	});
+	$(document).bind('click', function() {
+		$('#search-suggest').hide();
+	});
+	$(document).delegate('li', 'click', function() {
+		var keyword=$(this).text();
+		location.href='http://cn.bing.com/search?q='+keyword;
+	})>
+</body>
+</html>

@@ -1,0 +1,38 @@
+header h1{
+	height: 120px;
+	line-height: 120px;
+}
+
+.info{
+  margin-left: -10px;
+	
+}
+.info img{
+	box-shadow:0px 0px 10px #000;
+	width: 20%;
+	height:20%;
+	float: left;
+	border: 5px solid #fff;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+.info h2{
+	margin-bottom: 10px;
+	text-align: left;
+}
+.bio{
+	text-align: left;
+}
+.accordion-group>div{
+	border: 1px solid #ccc;
+	background-color: #e5e5e5;
+	font-size: 16px;
+	width: 100%;
+}
+.tabs-left{
+	background-color: #e5e5e5;
+	padding-top: 0 !important;	
+	border-radius: 5px;
+}
+
+
